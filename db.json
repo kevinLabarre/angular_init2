@@ -1,0 +1,258 @@
+{
+  "accounts": [
+    {
+      "id": 1,
+      "userId": 1,
+      "accountNumber": "FR7630001007941234567890185",
+      "accountType": "COURANT",
+      "solde": 1250.75,
+      "lastTransactionDate": "2023-04-15T14:32:15.000Z"
+    },
+    {
+      "id": 2,
+      "userId": 1,
+      "accountNumber": "FR7630004000431234567890121",
+      "accountType": "EPARGNE",
+      "solde": 2300.74,
+      "lastTransactionDate": "2023-04-15T14:32:15.000Z"
+    },
+    {
+      "id": 3,
+      "userId": 2,
+      "accountNumber": "FR7610107001011234567890129",
+      "accountType": "EPARGNE",
+      "solde": 13250,
+      "lastTransactionDate": "2023-04-28T11:24:36.000Z"
+    },
+    {
+      "id": 4,
+      "userId": 3,
+      "accountNumber": "FR7611315000011234567890138",
+      "accountType": "COURANT",
+      "solde": 325.15,
+      "lastTransactionDate": null
+    },
+    {
+      "id": 5,
+      "userId": 4,
+      "accountNumber": "FR7630007000111234567890144",
+      "accountType": "EPARGNE",
+      "solde": 8975.6,
+      "lastTransactionDate": "2023-05-08T13:12:05.000Z"
+    },
+    {
+      "id": 6,
+      "userId": 5,
+      "accountNumber": "FR7630003000401234567890157",
+      "accountType": "EPARGNE",
+      "solde": 3775.45,
+      "lastTransactionDate": "2023-04-20T15:37:28.000Z"
+    },
+    {
+      "id": 7,
+      "userId": 6,
+      "accountNumber": "FR7630002032531234567890168",
+      "accountType": "COURANT",
+      "solde": 150,
+      "lastTransactionDate": "2023-05-05T09:23:47.000Z"
+    },
+    {
+      "id": 8,
+      "userId": 7,
+      "accountNumber": "FR7611808009101234567890177",
+      "accountType": "EPARGNE",
+      "solde": 7840.25,
+      "lastTransactionDate": "2023-04-25T14:15:32.000Z"
+    },
+    {
+      "id": 9,
+      "userId": 7,
+      "accountNumber": "FR7611808009101234567890178",
+      "accountType": "COURANT",
+      "solde": 4250.50,
+      "lastTransactionDate": "2023-05-01T10:42:18.000Z"
+    }
+  ],
+  "actualites": [
+    {
+      "id": 1,
+      "categorie": "Investissement",
+      "titre": "La FakeBank lance un fonds d'investissement dans les mèmes",
+      "texte": "Notre équipe d'analystes a déterminé que les mèmes représentent désormais une classe d'actifs plus stable que l'immobilier. Investissez dès maintenant dans notre nouveau fonds 'MèmeStonks' et recevez un NFT gratuit de notre PDG qui fait un dab. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque ex error asperiores ipsa non, blanditiis quasi repellendus ad consequuntur facilis consequatur minima beatae quod cum, repudiandae earum nobis ipsum autem! Fugit voluptas harum magnam dolore omnis, aspernatur, sed tenetur, ullam sequi sapiente et officia? Esse aliquid quod enim quia autem minima iusto, minus cupiditate, soluta veritatis voluptate ducimus aut omnis! Reprehenderit eius optio necessitatibus quidem deserunt sapiente. Iure tempora maiores dolores sunt eos non doloribus voluptate deserunt possimus amet excepturi quidem, voluptatem assumenda rem provident eum laboriosam ducimus officiis mollitia. Consectetur animi magni aliquid corporis provident omnis voluptate quasi consequatur saepe dolores dicta voluptatibus, nam debitis cupiditate deserunt labore culpa eaque? Ducimus ad deleniti repudiandae dolorum consequuntur doloremque nesciunt commodi. Amet placeat temporibus repellat, consequatur cupiditate illum tempore aspernatur aliquid velit maiores corrupti repellendus dolore deleniti magnam sapiente voluptatum magni sunt totam unde accusamus nesciunt omnis! Omnis quam culpa qui?",
+      "datePublication": "2023-10-15",
+      "dateModification": "2023-10-16",
+      "image": "https://images.unsplash.com/photo-1640340434855-6084b1f4901c?q=80&w=800"
+    },
+    {
+      "id": 2,
+      "categorie": "Sécurité",
+      "titre": "Nouveau système de sécurité : votre argent est si bien caché que même nous ne savons pas où il est",
+      "texte": "FakeBank est fière d'annoncer son nouveau protocole de sécurité révolutionnaire. Votre argent est désormais si bien protégé que même nos comptables ne peuvent pas le trouver. Nous appelons cela 'la sécurité par confusion totale'.",
+      "datePublication": "2023-11-02",
+      "dateModification": null,
+      "image": "https://images.unsplash.com/photo-1614028674026-a65e31bfd27c?q=80&w=800"
+    },
+    {
+      "id": 3,
+      "categorie": "Innovation",
+      "titre": "FakeBank remplace tous ses conseillers par des ChatGPT en cravate",
+      "texte": "Dans un souci de modernisation, tous nos conseillers clientèle seront remplacés par des IA avancées portant des cravates virtuelles. Les premiers tests montrent qu'elles sont 200% plus efficaces pour dire 'avez-vous essayé d'éteindre et de rallumer votre application bancaire ?'",
+      "datePublication": "2023-11-10",
+      "dateModification": null,
+      "image": "https://images.unsplash.com/photo-1531746790731-6c087fecd65a?q=80&w=800"
+    },
+    {
+      "id": 4,
+      "categorie": "Économie",
+      "titre": "Inflation record : le café de notre distributeur atteint 5€",
+      "texte": "Suite à l'inflation mondiale, le prix du café dans nos distributeurs a atteint un sommet historique de 5€. Notre économiste en chef suggère d'investir dans des gobelets usagés, dont la valeur a augmenté de 300% ce trimestre.",
+      "datePublication": "2023-09-28",
+      "dateModification": "2023-10-05",
+      "image": "https://images.unsplash.com/photo-1497515114629-f71d768fd07c?q=80&w=800"
+    },
+    {
+      "id": 5,
+      "categorie": "Services",
+      "titre": "Nouveau service premium : nous comptons votre argent deux fois",
+      "texte": "Pour seulement 15€/mois, notre service premium 'Double Check' vous garantit que nous compterons votre argent deux fois. Parce que voir disparaître son argent une fois ne suffit pas, autant le voir partir deux fois pour être sûr.",
+      "datePublication": "2023-10-20",
+      "dateModification": "2023-10-21",
+      "image": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=800"
+    },
+    {
+      "id": 6,
+      "categorie": "Responsabilité",
+      "titre": "FakeBank devient écologique : nos relevés bancaires sont maintenant imprimés sur des feuilles de chou",
+      "texte": "Dans le cadre de notre engagement pour la planète, tous nos relevés bancaires sont désormais imprimés sur des feuilles de chou bio. Bonus : ils sont comestibles en cas de crise financière !",
+      "datePublication": "2023-11-15",
+      "dateModification": null,
+      "image": "https://images.unsplash.com/photo-1471193945509-9ad0617afabf?q=80&w=800"
+    },
+    {
+      "id": 7,
+      "categorie": "Promotion",
+      "titre": "Ouvrez un compte et recevez un NFT de notre mascotte 'Coinky le cochon'",
+      "texte": "Pour toute ouverture de compte, recevez un NFT exclusif de notre mascotte 'Coinky le cochon'. Attention, la valeur de ce NFT est aussi volatile que nos conseils d'investissement.",
+      "datePublication": "2023-10-10",
+      "dateModification": null,
+      "image": "https://images.unsplash.com/photo-1603912699214-92627f304eb6?q=80&w=800"
+    },
+    {
+      "id": 8,
+      "categorie": "International",
+      "titre": "FakeBank ouvre une succursale sur Mars",
+      "texte": "Anticipant la colonisation martienne, FakeBank est fière d'annoncer l'ouverture de sa première agence extraterrestre. Les frais de virement Terre-Mars seront seulement de 99,99% du montant transféré.",
+      "datePublication": "2023-11-01",
+      "dateModification": "2023-11-05",
+      "image": "https://images.unsplash.com/photo-1614728894747-a83421e2b9c9?q=80&w=800"
+    },
+    {
+      "id": 9,
+      "categorie": "Technologie",
+      "titre": "Notre nouvelle application bancaire intègre un détecteur de panique financière",
+      "texte": "Notre app détecte désormais quand vous paniquez en voyant votre solde. Elle active automatiquement le 'Mode Zen' qui remplace votre solde par des photos de chatons et joue une berceuse apaisante.",
+      "datePublication": "2023-09-15",
+      "dateModification": "2023-09-18",
+      "image": "https://images.unsplash.com/photo-1555421689-491a97ff2040?q=80&w=800"
+    },
+    {
+      "id": 10,
+      "categorie": "Formation",
+      "titre": "FakeBank lance des cours d'économie pour enfants : 'Comment dépenser l'argent de poche de tes parents'",
+      "texte": "Notre nouveau programme éducatif apprend aux enfants les bases de la finance moderne : acheter des bonbons à crédit, blâmer l'inflation pour les dépenses excessives et créer un paradis fiscal dans le bac à sable.",
+      "datePublication": "2023-10-25",
+      "dateModification": null,
+      "image": "https://images.unsplash.com/photo-1484820540004-14229fe36ca4?q=80&w=800"
+    },
+    {
+      "id": 11,
+      "categorie": "Événement",
+      "titre": "Grand concours : Devinez le mot de passe de notre PDG et gagnez son poste",
+      "texte": "Dans un effort de transparence sans précédent, notre PDG met son poste en jeu. Devinez son mot de passe (indice : ce n'est PAS 'password123') et prenez sa place ! Attention aux frais de gestion du poste de 99% de votre salaire.",
+      "datePublication": "2023-11-20",
+      "dateModification": null,
+      "image": "https://images.unsplash.com/photo-1573497620053-ea5300f94f21?q=80&w=800"
+    },
+    {
+      "id": 12,
+      "categorie": "Partenariat",
+      "titre": "FakeBank s'associe avec les Monopoly pour remplacer les billets de jeu par de vrais virements",
+      "texte": "Grâce à notre partenariat révolutionnaire, les parties de Monopoly deviennent plus réalistes que jamais. Les joueurs peuvent désormais s'endetter réellement en achetant l'avenue des Champs-Élysées. Les frais de découvert s'appliquent.",
+      "datePublication": "2023-10-05",
+      "dateModification": "2023-10-07",
+      "image": "https://images.unsplash.com/photo-1637169797848-12431f1d355c?q=80&w=800"
+    },
+    {
+      "id": 13,
+      "categorie": "Produit",
+      "titre": "Nouveau crédit immobilier 'Château dans les nuages' pour des propriétés qui n'existent pas",
+      "texte": "Pourquoi se limiter à la réalité ? Notre nouveau prêt vous permet d'acheter des propriétés virtuelles dans le métavers. Avantage : pas de voisins bruyants. Inconvénient : vous ne pouvez pas réellement y vivre. Taux d'intérêt : imaginaire + 5%.",
+      "datePublication": "2023-09-10",
+      "dateModification": null,
+      "image": "https://images.unsplash.com/photo-1548013146-72479768bada?q=80&w=800"
+    },
+    {
+      "id": 14,
+      "categorie": "Innovation",
+      "titre": "FakeBank lance des distributeurs automatiques qui jugent vos dépenses",
+      "texte": "Nos nouveaux DAB émettent désormais des commentaires sarcastiques sur vos habitudes financières. 'Encore un retrait pour commander des pizzas?' ou 'Vraiment, un troisième achat de chaussures ce mois-ci?' sont parmi les remarques les plus appréciées par notre équipe de testeurs masochistes.",
+      "datePublication": "2023-12-01",
+      "dateModification": null,
+      "image": "https://images.unsplash.com/photo-1564760055775-d63b17a55c44?q=80&w=800"
+    },
+    {
+      "id": 15,
+      "categorie": "Service Client",
+      "titre": "Notre nouveau service téléphonique vous met en attente avant même que vous n'appeliez",
+      "texte": "Grâce à notre technologie prédictive révolutionnaire, nous savons quand vous allez nous appeler. Pour gagner du temps, nous vous mettons en attente 10 minutes avant même que vous ne composiez notre numéro. Un email vous informera que vous êtes déjà en attente.",
+      "datePublication": "2023-11-28",
+      "dateModification": "2023-11-29",
+      "image": "https://images.unsplash.com/photo-1534536281715-e28d76689b4d?q=80&w=800"
+    },
+    {
+      "id": 16,
+      "categorie": "Investissement",
+      "titre": "FakeBank propose d'investir dans les rêves brisés : 'rendement garanti de 100% en déception'",
+      "texte": "Notre nouveau fonds d'investissement se spécialise dans les startups vouées à l'échec et les ambitions irréalistes. Notre brochure promet : 'La seule chose qui monte plus vite que l'inflation, c'est le taux de désillusion de nos clients.'",
+      "datePublication": "2023-12-05",
+      "dateModification": null,
+      "image": "https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?q=80&w=800"
+    },
+    {
+      "id": 17,
+      "categorie": "Technologie",
+      "titre": "Notre algorithme de crédit utilise désormais votre historique de recherche et vos playlists Spotify",
+      "texte": "Pour une analyse financière plus précise, notre IA évalue maintenant votre solvabilité en fonction de vos goûts musicaux. Les fans de K-pop obtiennent automatiquement un bonus, tandis que les amateurs de chansons sur la faillite sont soumis à une enquête approfondie.",
+      "datePublication": "2023-11-25",
+      "dateModification": null,
+      "image": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=800"
+    },
+    {
+      "id": 18,
+      "categorie": "Responsabilité",
+      "titre": "FakeBank compense son empreinte carbone en plantant des billets de banque usagés",
+      "texte": "Notre nouvelle initiative écologique consiste à planter des billets de banque déchiquetés. 'Ils ne pousseront peut-être pas, mais au moins on aura essayé', déclare notre responsable développement durable qui arrose quotidiennement le jardin monétaire avec du café de la machine à 5€.",
+      "datePublication": "2023-12-10",
+      "dateModification": null,
+      "image": "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?q=80&w=800"
+    },
+    {
+      "id": 19,
+      "categorie": "Formation",
+      "titre": "Nouveau séminaire : 'Comment expliquer à vos amis que vous travaillez dans une banque sans perdre leur respect'",
+      "texte": "Ce cours intensif de 3 jours vous apprendra des techniques essentielles comme 'prétendre que vous redistribuez l'argent aux pauvres la nuit' ou 'mentionner uniquement la machine à café gratuite quand on vous demande les avantages de votre travail'.",
+      "datePublication": "2023-12-03",
+      "dateModification": "2023-12-04",
+      "image": "https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=800"
+    },
+    {
+      "id": 20,
+      "categorie": "Économie",
+      "titre": "FakeBank introduit sa propre unité monétaire : le 'LOL' (Liquidité Outrageusement Limitée)",
+      "texte": "Face aux fluctuations des marchés, nous lançons notre propre devise dont la valeur est indexée sur le nombre de clients qui sourient en quittant nos agences. Actuellement, un LOL vaut environ 0,0000001€, mais nous restons optimistes pour 2024.",
+      "datePublication": "2023-11-30",
+      "dateModification": null,
+      "image": "https://images.unsplash.com/photo-1518546305927-5a555bb7020d?q=80&w=800"
+    }
+  ]
+}
