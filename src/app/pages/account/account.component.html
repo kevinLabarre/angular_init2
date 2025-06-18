@@ -1,1 +1,44 @@
-<p>account works!</p>
+<section>
+  <h1>Mes comptes bancaires</h1>
+
+  <div class="overflow-x-auto">
+    <table class="table table-zebra w-full">
+      <!-- En-tête du tableau -->
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Numéro de compte</th>
+          <th>Type de compte</th>
+          <th>Solde</th>
+          <th>Dernière transaction</th>
+          <th>Effectuer un dépôt / retrait</th>
+        </tr>
+      </thead>
+      <!-- Corps du tableau -->
+      <tbody>
+
+        @for(account of accounts ; track account.id){
+        <tr>
+          <td>{{account.id}}</td>
+          <td>{{account.accountNumber}}</td>
+          <td>{{account.accountType}}</td>
+          <td>{{account.solde | currency:'EUR':'symbol':'1.2-2'}}</td>
+          <td>{{account.lastTransactionDate | date:'d MMMM yyyy'}}</td>
+          <td>
+            <button (click)="handleDelete(account.id)" class="btn btn-error">Supprimer</button>
+          </td>
+        </tr>
+        }
+      </tbody>
+    </table>
+
+    <button (click)="handleCreate()" class="btn btn-primary">Ajouter un nouveau compte</button>
+
+    @if(displayCreateForm){
+    <app-account-create-form />
+    }
+
+
+  </div>
+
+</section>
