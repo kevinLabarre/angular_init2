@@ -1,0 +1,22 @@
+<section class="h-full">
+
+  @if(news){
+  <div class="card bg-base-100 shadow-xl h-full flex flex-col">
+    <figure class="h-32 overflow-hidden flex-shrink-0">
+      <img src="{{ news.image }}" alt="image de la news" class="w-full h-full object-cover" />
+    </figure>
+    <div class="card-body flex flex-col flex-grow">
+      <h2 class="card-title line-clamp-2">{{ news.titre }}</h2>
+      <p class="line-clamp-3 flex-grow">{{ news.texte }}</p>
+      <div class="card-actions justify-end mt-auto">
+        <a class="btn btn-primary" [routerLink]="['/news-details', news.id]">Lire la suite</a>
+        <a class="btn btn-primary" routerLink="/news-details/{{news.id}}">Lire la suite</a>
+      </div>
+    </div>
+  </div>
+  } @else {
+  <p>Actualité non disponible</p>
+  }
+
+
+</section>

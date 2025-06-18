@@ -16,6 +16,10 @@ export class NewsService {
     return this.http.get<News[]>(this.baseUrl)
   }
 
+  getNewsById(id: number): Observable<News> {
+    return this.http.get<News>(`${this.baseUrl}/${id}`)
+  }
+
   createNews(news: News) {
     return this.http.post(this.baseUrl, news)
   }

@@ -3,10 +3,11 @@ import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { NewsService } from '../../services/news/news.service';
 import { News } from '../../interfaces/news.interface';
 import { lastValueFrom } from 'rxjs';
+import { NewsCardComponent } from "../../components/news-card/news-card.component";
 
 @Component({
   selector: 'app-news',
-  imports: [RouterOutlet, RouterLink, RouterLinkActive],
+  imports: [RouterOutlet, RouterLink, RouterLinkActive, NewsCardComponent],
   templateUrl: './news.component.html',
   styleUrl: './news.component.css'
 })
