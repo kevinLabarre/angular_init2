@@ -1,4 +1,4 @@
-import { Component, EventEmitter, inject, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, inject, Input, OnChanges, OnInit, Output, SimpleChanges } from '@angular/core';
 import { Account } from '../../interfaces/account.interface';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { AccountService } from '../../services/account/account.service';
@@ -9,7 +9,7 @@ import { AccountService } from '../../services/account/account.service';
   templateUrl: './account-update-form.component.html',
   styleUrl: './account-update-form.component.css'
 })
-export class AccountUpdateFormComponent implements OnInit {
+export class AccountUpdateFormComponent implements OnChanges {
 
   @Input({ required: true }) accountUpdate!: Account
 
@@ -26,18 +26,22 @@ export class AccountUpdateFormComponent implements OnInit {
     lastTransactionDate: new FormControl("")
   })
 
+  // ngOnChanges sert à surveiller les changement de valeur d'une input
+  ngOnChanges(changes: SimpleChanges): void {
+    // Ce qui est dans le if, sera relancé à chaque changement de valeur de accountUpdate (notre @Input())
+    if (changes["accountUpdate"]) {
+      const a = {
+        ...this.accountUpdate,
+        id: String(this.accountUpdate.id),// Conversion en String
+        userId: String(this.accountUpdate.userId), // Conversion en String
+        solde: String(this.accountUpdate.solde) // Conversion en String
+      }
 
-  ngOnInit(): void {
-    const a = {
-      ...this.accountUpdate,
-      id: String(this.accountUpdate.id),// Conversion en String
-      userId: String(this.accountUpdate.userId), // Conversion en String
-      solde: String(this.accountUpdate.solde) // Conversion en String
+      // Pour pré-remplissage du formulaire
+      this.accountForm.setValue(a)
     }
-
-    // Pour pré-remplissage du formulaire
-    this.accountForm.setValue(a)
   }
+
 
   handleSubmit() {
 

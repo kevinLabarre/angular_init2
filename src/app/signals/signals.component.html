@@ -5,4 +5,8 @@
   <button (click)="increment()" class="btn">+</button>
   <button (click)="decrement()" class="btn">-</button>
   <button (click)="reset()" class="btn">Reset</button>
+
+  <h2>Composant enfant :</h2>
+  <app-signals-children [count]="count()" />
+
 </section>

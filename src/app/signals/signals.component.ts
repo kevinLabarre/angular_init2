@@ -1,8 +1,9 @@
 import { Component, computed, effect, signal, Signal, WritableSignal } from '@angular/core';
+import { SignalsChildrenComponent } from "../signals-children/signals-children.component";
 
 @Component({
   selector: 'app-signals',
-  imports: [],
+  imports: [SignalsChildrenComponent],
   templateUrl: './signals.component.html',
   styleUrl: './signals.component.css'
 })
