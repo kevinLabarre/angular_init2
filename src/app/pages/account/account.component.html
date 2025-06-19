@@ -25,7 +25,9 @@
           <td>{{account.solde | currency:'EUR':'symbol':'1.2-2'}}</td>
           <td>{{account.lastTransactionDate | date:'d MMMM yyyy'}}</td>
           <td>
+            @if(account.id){
             <button (click)="handleDelete(account.id)" class="btn btn-error">Supprimer</button>
+            }
           </td>
         </tr>
         }

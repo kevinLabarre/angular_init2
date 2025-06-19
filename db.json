@@ -69,8 +69,24 @@
       "userId": 7,
       "accountNumber": "FR7611808009101234567890178",
       "accountType": "COURANT",
-      "solde": 4250.50,
+      "solde": 4250.5,
       "lastTransactionDate": "2023-05-01T10:42:18.000Z"
+    },
+    {
+      "id": "5c8a",
+      "userId": 5,
+      "accountNumber": "1515151515153",
+      "accountType": "EPARGNE",
+      "solde": 150,
+      "lastTransactionDate": "Wed Jun 18 2025 16:32:05 GMT+0200 (heure d’été d’Europe centrale)"
+    },
+    {
+      "id": "8d00",
+      "userId": 1,
+      "accountNumber": "ijij45",
+      "accountType": "ffffff",
+      "solde": 150,
+      "lastTransactionDate": "Wed Jun 18 2025 16:38:42 GMT+0200 (heure d’été d’Europe centrale)"
     }
   ],
   "actualites": [

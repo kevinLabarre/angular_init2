@@ -24,4 +24,9 @@ export class AccountService {
     return this.http.delete<Account>(`${this.baseUrl}/${id}`)
   }
 
+  addAccount(account: Account): Observable<Account> {
+    // Le .post de http client prend 2 paramètres : l'url (type string) et le body de la requete (type: Object Javascript)
+    return this.http.post<Account>(this.baseUrl, account)
+  }
+
 }

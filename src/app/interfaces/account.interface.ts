@@ -1,5 +1,5 @@
 export interface Account {
-  id: number,
+  id?: number,  // ? = optionnel
   userId: number,
   accountNumber: string,
   accountType: string,

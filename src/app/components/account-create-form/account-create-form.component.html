@@ -20,8 +20,8 @@
 
     <input type="number" placeholder="Solde" formControlName="solde" />
 
-    <!-- Ce bouton déclenche le fonction handleTest() ET la fonction handleSubmit()
-    <button class="btn" (click)="handleTest()">Test</button>-->
+    <!-- Avec un type="button", le bouton ne déclenchera pas le submit-->
+    <button type="button" class="btn" (click)="handleTest()">Test</button>
 
     <!-- Ce bouton déclenche QUE la fonction handleSubmit() -->
     <button class="btn" type="submit">Créer le produit</button>

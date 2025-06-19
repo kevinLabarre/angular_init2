@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { AccountService } from '../../services/account/account.service';
+import { Account } from '../../interfaces/account.interface';
 
 @Component({
   selector: 'app-account-create-form',
@@ -8,6 +10,8 @@ import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angula
   styleUrl: './account-create-form.component.css'
 })
 export class AccountCreateFormComponent {
+
+  service = inject(AccountService)
 
   accountForm = new FormGroup({
     userId: new FormControl(""),
@@ -18,12 +22,27 @@ export class AccountCreateFormComponent {
 
   handleSubmit() {
     if (this.accountForm.valid) {
-      console.log(this.accountForm.value)
+
+      // Ok en Javascript, pas en typescript psq les types ne correspondent pas strictement (certaines valeurs du formulaire peuvent etre undefined)
+      // const newAccount: Account = { ...this.accountForm.value, lastTransactionDate: String(new Date()) }
+
+      const resultForm = this.accountForm.value
+
+      const newAccount: Account = {
+        userId: Number(resultForm.userId),
+        accountNumber: resultForm.accountNumber || "",
+        accountType: resultForm.accountType || "",
+        solde: Number(resultForm.solde),
+        lastTransactionDate: String(new Date())
+      }
+
+      this.service.addAccount(newAccount).subscribe(resp => {
+
+      })
     } else {
       console.log("Erreur dans le remplissage du formulaire")
     }
   }
-
 
   handleTest() {
     console.log("HANDLE TEST déclenché !!")
