@@ -1,4 +1,4 @@
-import { Component, inject, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, inject, Input, OnInit, Output } from '@angular/core';
 import { Account } from '../../interfaces/account.interface';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { AccountService } from '../../services/account/account.service';
@@ -12,6 +12,8 @@ import { AccountService } from '../../services/account/account.service';
 export class AccountUpdateFormComponent implements OnInit {
 
   @Input({ required: true }) accountUpdate!: Account
+
+  @Output() handleUpdateAccount: EventEmitter<Account> = new EventEmitter()
 
   service = inject(AccountService)
 
@@ -38,14 +40,27 @@ export class AccountUpdateFormComponent implements OnInit {
   }
 
   handleSubmit() {
-    // Ajouter la logique pour la mise à jour
 
-    // Vérifier que ça fonctionne (des données sont mises à jour, on peut vérifier en rafraichissant la page)
+    console.log(this.accountForm.value)
 
-    // Mettre à jour le tableau du composant parent (utiliser @Output)
+    if (this.accountForm.valid) {
+      // Ajouter la logique pour la mise à jour
+      const updatedAccount = {
+        id: this.accountUpdate.id,
+        userId: Number(this.accountForm.value.userId),
+        solde: Number(this.accountForm.value.solde),
+        accountNumber: this.accountForm.value.accountNumber || "",
+        accountType: this.accountForm.value.accountType || "",
+        lastTransactionDate: this.accountForm.value.lastTransactionDate || "",
+      }
+
+      this.service.updateAccount(updatedAccount).subscribe({
+        next: (resp) => this.handleUpdateAccount.emit(resp),
+        error: (e) => console.error(e.message)
+      })
+      this.accountForm.reset();
+    }
   }
-
-
 
 
   // Logique d'affichage des erreurs sur le HTML

@@ -37,7 +37,7 @@
 
     @if(displayUpdateForm && accountUpdate){
     <h2>Modification d'un compte</h2>
-    <app-account-update-form [accountUpdate]="accountUpdate" />
+    <app-account-update-form [accountUpdate]="accountUpdate" (handleUpdateAccount)="handleUpdateAccount($event)" />
     }
 
 

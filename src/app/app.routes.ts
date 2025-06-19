@@ -7,6 +7,7 @@ import { RemoveNewsComponent } from './components/remove-news/remove-news.compon
 import { NewsDetailsComponent } from './pages/news-details/news-details.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { AccountComponent } from './pages/account/account.component';
+import { SignalsComponent } from './signals/signals.component';
 
 export const routes: Routes = [
   { path: "", component: HomePageComponent, title: "Page d'accueil" },
@@ -23,6 +24,7 @@ export const routes: Routes = [
   },
   { path: "news-details/:id", component: NewsDetailsComponent, title: "détail actualité" },
   { path: "compte-bancaire", component: AccountComponent, title: "Comptes bancaire" },
+  { path: "signals", component: SignalsComponent, title: "Les signaux" },
 
   // Page 404
   { path: "**", component: NotFoundComponent }

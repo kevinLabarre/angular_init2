@@ -55,4 +55,18 @@ export class AccountComponent implements OnInit {
     this.accountUpdate = account
   }
 
+  handleUpdateAccount(account: Account) {
+    if (this.accounts) {
+      // this.accounts = this.accounts?.map(a => {
+      //   if (a.id === account.id) {
+      //     return account
+      //   } else return a
+      // })
+
+      this.accounts = this.accounts.map(a => a.id === account.id ? account : a)
+    }
+
+
+  }
+
 }
