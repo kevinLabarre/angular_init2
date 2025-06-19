@@ -29,4 +29,11 @@ export class AccountService {
     return this.http.post<Account>(this.baseUrl, account)
   }
 
+  updateAccount(account: Account): Observable<Account> {
+    if (account.id) {
+      return this.http.put<Account>(`${this.baseUrl}/${account.id}`, account)
+    } else throw new Error("Le compte à mettre à jour doit avoir un id")
+  }
+
+
 }

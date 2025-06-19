@@ -4,8 +4,8 @@
       "id": "1",
       "userId": 1,
       "accountNumber": "FR7630001007941234567890185",
-      "accountType": "COURANT",
-      "solde": 1250.75,
+      "accountType": "EPARGNE",
+      "solde": 1200,
       "lastTransactionDate": "2023-04-15T14:32:15.000Z"
     },
     {

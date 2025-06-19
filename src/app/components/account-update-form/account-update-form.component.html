@@ -2,7 +2,7 @@
   <h1>Mon formulaire</h1>
 
   <form [formGroup]="accountForm" (ngSubmit)="handleSubmit()">
-
+    <input type="number" placeholder="ID" formControlName="id" />
     <input type="number" placeholder="user ID" formControlName="userId" />
     <input type="text" placeholder="numéro de compte" formControlName="accountNumber" />
 
@@ -19,7 +19,7 @@
     }
 
     <input type="number" placeholder="Solde" formControlName="solde" />
-
+    <input type="date" placeholder="Dernière transaction" hidden formControlName="lastTransactionDate" />
     <!-- Ce bouton déclenche la fonction handleSubmit() -->
     <button class="btn" type="submit">Créer le produit</button>
   </form>
