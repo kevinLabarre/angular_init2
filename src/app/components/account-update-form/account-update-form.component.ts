@@ -37,7 +37,14 @@ export class AccountUpdateFormComponent implements OnInit {
     this.accountForm.setValue(a)
   }
 
-  handleSubmit() { }
+  handleSubmit() {
+
+    // Ajouter la logique pour la mise à jour
+
+    // Vérifier que ça fonctionne (des données sont mises à jour)
+
+    // Mettre à jour le tableau du composant parent (utiliser @Output)
+  }
 
 
 
