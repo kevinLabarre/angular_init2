@@ -38,10 +38,9 @@ export class AccountUpdateFormComponent implements OnInit {
   }
 
   handleSubmit() {
-
     // Ajouter la logique pour la mise à jour
 
-    // Vérifier que ça fonctionne (des données sont mises à jour)
+    // Vérifier que ça fonctionne (des données sont mises à jour, on peut vérifier en rafraichissant la page)
 
     // Mettre à jour le tableau du composant parent (utiliser @Output)
   }
