@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, EventEmitter, inject, Output } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { AccountService } from '../../services/account/account.service';
 import { Account } from '../../interfaces/account.interface';
@@ -12,6 +12,8 @@ import { Account } from '../../interfaces/account.interface';
 export class AccountCreateFormComponent {
 
   service = inject(AccountService)
+
+  @Output() accountCreated: EventEmitter<Account> = new EventEmitter();
 
   accountForm = new FormGroup({
     userId: new FormControl(""),
@@ -37,7 +39,8 @@ export class AccountCreateFormComponent {
       }
 
       this.service.addAccount(newAccount).subscribe(resp => {
-
+        this.accountCreated.emit(resp)
+        this.accountForm.reset()
       })
     } else {
       console.log("Erreur dans le remplissage du formulaire")

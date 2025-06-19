@@ -1,0 +1,26 @@
+<section>
+  <h1>Mon formulaire</h1>
+
+  <form [formGroup]="accountForm" (ngSubmit)="handleSubmit()">
+
+    <input type="number" placeholder="user ID" formControlName="userId" />
+    <input type="text" placeholder="numéro de compte" formControlName="accountNumber" />
+
+    @if(accountNumberControls('accountNumber')?.errors && accountForm.controls.accountNumber.touched){
+    <p>Nbr caractères min: 5</p> }
+
+    <input type="text" placeholder="Type de compte" formControlName="accountType" />
+
+    @if(accountNumberControls('accountType')?.touched){
+    @if(errorAccountTypeRequired){
+    <p>Type de compte Requis !</p> }
+    @if(errorAccountTypeMaxLength){
+    <p>type de compte: Nombre de caractères max: 10 !</p> }
+    }
+
+    <input type="number" placeholder="Solde" formControlName="solde" />
+
+    <!-- Ce bouton déclenche la fonction handleSubmit() -->
+    <button class="btn" type="submit">Créer le produit</button>
+  </form>
+</section>

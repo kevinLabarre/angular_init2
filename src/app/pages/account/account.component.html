@@ -27,6 +27,7 @@
           <td>
             @if(account.id){
             <button (click)="handleDelete(account.id)" class="btn btn-error">Supprimer</button>
+            <button (click)="handleOpenFormUpdate(account)" class="ml-2 btn btn-warning">Modifier</button>
             }
           </td>
         </tr>
@@ -34,11 +35,21 @@
       </tbody>
     </table>
 
-    <button (click)="handleCreate()" class="btn btn-primary">Ajouter un nouveau compte</button>
-
-    @if(displayCreateForm){
-    <app-account-create-form />
+    @if(displayUpdateForm && accountUpdate){
+    <h2>Modification d'un compte</h2>
+    <app-account-update-form [accountUpdate]="accountUpdate" />
     }
+
+
+    <h2>Création d'un compte</h2>
+    <button (click)="handleCreate()" class="btn btn-primary">Ajouter un nouveau compte</button>
+    @if(displayCreateForm){
+    <app-account-create-form (accountCreated)="handleCreateNewAccount($event)" />
+    }
+
+
+
+
 
   </div>
 

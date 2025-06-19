@@ -1,7 +1,7 @@
 {
   "accounts": [
     {
-      "id": 1,
+      "id": "1",
       "userId": 1,
       "accountNumber": "FR7630001007941234567890185",
       "accountType": "COURANT",
@@ -9,7 +9,7 @@
       "lastTransactionDate": "2023-04-15T14:32:15.000Z"
     },
     {
-      "id": 2,
+      "id": "2",
       "userId": 1,
       "accountNumber": "FR7630004000431234567890121",
       "accountType": "EPARGNE",
@@ -17,7 +17,7 @@
       "lastTransactionDate": "2023-04-15T14:32:15.000Z"
     },
     {
-      "id": 3,
+      "id": "3",
       "userId": 2,
       "accountNumber": "FR7610107001011234567890129",
       "accountType": "EPARGNE",
@@ -25,7 +25,7 @@
       "lastTransactionDate": "2023-04-28T11:24:36.000Z"
     },
     {
-      "id": 4,
+      "id": "4",
       "userId": 3,
       "accountNumber": "FR7611315000011234567890138",
       "accountType": "COURANT",
@@ -33,7 +33,7 @@
       "lastTransactionDate": null
     },
     {
-      "id": 5,
+      "id": "5",
       "userId": 4,
       "accountNumber": "FR7630007000111234567890144",
       "accountType": "EPARGNE",
@@ -41,7 +41,7 @@
       "lastTransactionDate": "2023-05-08T13:12:05.000Z"
     },
     {
-      "id": 6,
+      "id": "6",
       "userId": 5,
       "accountNumber": "FR7630003000401234567890157",
       "accountType": "EPARGNE",
@@ -49,7 +49,7 @@
       "lastTransactionDate": "2023-04-20T15:37:28.000Z"
     },
     {
-      "id": 7,
+      "id": "7",
       "userId": 6,
       "accountNumber": "FR7630002032531234567890168",
       "accountType": "COURANT",
@@ -57,7 +57,7 @@
       "lastTransactionDate": "2023-05-05T09:23:47.000Z"
     },
     {
-      "id": 8,
+      "id": "8",
       "userId": 7,
       "accountNumber": "FR7611808009101234567890177",
       "accountType": "EPARGNE",
@@ -65,28 +65,12 @@
       "lastTransactionDate": "2023-04-25T14:15:32.000Z"
     },
     {
-      "id": 9,
+      "id": "9",
       "userId": 7,
       "accountNumber": "FR7611808009101234567890178",
       "accountType": "COURANT",
       "solde": 4250.5,
       "lastTransactionDate": "2023-05-01T10:42:18.000Z"
-    },
-    {
-      "id": "5c8a",
-      "userId": 5,
-      "accountNumber": "1515151515153",
-      "accountType": "EPARGNE",
-      "solde": 150,
-      "lastTransactionDate": "Wed Jun 18 2025 16:32:05 GMT+0200 (heure d’été d’Europe centrale)"
-    },
-    {
-      "id": "8d00",
-      "userId": 1,
-      "accountNumber": "ijij45",
-      "accountType": "ffffff",
-      "solde": 150,
-      "lastTransactionDate": "Wed Jun 18 2025 16:38:42 GMT+0200 (heure d’été d’Europe centrale)"
     }
   ],
   "actualites": [

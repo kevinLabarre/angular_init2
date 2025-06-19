@@ -3,10 +3,11 @@ import { AccountService } from '../../services/account/account.service';
 import { Account } from '../../interfaces/account.interface';
 import { CurrencyPipe, DatePipe } from '@angular/common';
 import { AccountCreateFormComponent } from "../../components/account-create-form/account-create-form.component";
+import { AccountUpdateFormComponent } from "../../components/account-update-form/account-update-form.component";
 
 @Component({
   selector: 'app-account',
-  imports: [CurrencyPipe, DatePipe, AccountCreateFormComponent],
+  imports: [CurrencyPipe, DatePipe, AccountCreateFormComponent, AccountUpdateFormComponent],
   templateUrl: './account.component.html',
   styleUrl: './account.component.css'
 })
@@ -17,6 +18,9 @@ export class AccountComponent implements OnInit {
   accounts?: Account[]
 
   displayCreateForm: boolean = false
+  displayUpdateForm: boolean = false
+
+  accountUpdate?: Account
 
   ngOnInit(): void {
     this.service.getAccounts().subscribe({
@@ -40,5 +44,15 @@ export class AccountComponent implements OnInit {
     this.displayCreateForm = true;
   }
 
+  handleCreateNewAccount(account: Account) {
+    if (this.accounts) {
+      this.accounts = [...this.accounts, account]
+    }
+  }
+
+  handleOpenFormUpdate(account: Account) {
+    this.displayUpdateForm = true;
+    this.accountUpdate = account
+  }
 
 }
