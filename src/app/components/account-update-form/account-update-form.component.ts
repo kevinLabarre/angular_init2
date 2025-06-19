@@ -1,4 +1,4 @@
-import { Component, EventEmitter, inject, Input, OnChanges, OnInit, Output, SimpleChanges } from '@angular/core';
+import { Component, EventEmitter, inject, Input, OnChanges, OnInit, output, Output, SimpleChanges } from '@angular/core';
 import { Account } from '../../interfaces/account.interface';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { AccountService } from '../../services/account/account.service';
@@ -13,7 +13,10 @@ export class AccountUpdateFormComponent implements OnChanges {
 
   @Input({ required: true }) accountUpdate!: Account
 
-  @Output() handleUpdateAccount: EventEmitter<Account> = new EventEmitter()
+  // @Output() handleUpdateAccount: EventEmitter<Account> = new EventEmitter()
+
+  // Pareil que la ligne ci-dessus, avec nouvelle syntaxe
+  handleUpdateAccount = output<Account>();
 
   service = inject(AccountService)
 

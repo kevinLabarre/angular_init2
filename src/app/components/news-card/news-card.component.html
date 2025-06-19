@@ -11,6 +11,7 @@
       <div class="card-actions justify-end mt-auto">
         <a class="btn btn-primary" [routerLink]="['/news-details', news.id]">Lire la suite</a>
         <a class="btn btn-primary" routerLink="/news-details/{{news.id}}">Lire la suite</a>
+        <a class="btn" (click)="handleShowDetails()">Afficher les détails</a>
       </div>
     </div>
   </div>

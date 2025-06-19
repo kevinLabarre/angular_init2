@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { News } from '../../interfaces/news.interface';
 import { RouterLink } from '@angular/router';
+import { ShareNewsService } from '../../services/share-news.service';
 
 
 @Component({
@@ -11,4 +12,11 @@ import { RouterLink } from '@angular/router';
 })
 export class NewsCardComponent {
   @Input({ required: true }) news?: News
+
+  constructor(private service: ShareNewsService) { }
+
+  handleShowDetails() {
+    this.service.updateNews(this.news!)
+  }
+
 }
