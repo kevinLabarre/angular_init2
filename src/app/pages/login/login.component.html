@@ -1,0 +1,23 @@
+<section>
+  <form [formGroup]="loginForm" (ngSubmit)="handleSubmit()"
+    class="max-w-md mx-auto p-6 bg-base-100 rounded-lg shadow-lg">
+    <h1>Connexion</h1>
+
+    <div class="form-control w-full mb-4">
+      <label class="label">
+        <span class="label-text">Email:</span>
+      </label>
+      <input type="text" formControlName="login" placeholder="Entrez votre email" class="input input-bordered w-full" />
+    </div>
+    <div class="form-control w-full mb-4">
+      <label class="label">
+        <span class="label-text">Password:</span>
+      </label>
+      <input type="password" formControlName="password" placeholder="mot de passe"
+        class="input input-bordered w-full" />
+    </div>
+    <div class="w-fit m-auto">
+      <button class="btn btn-primary" type="submit">Se connecter</button>
+    </div>
+  </form>
+</section>

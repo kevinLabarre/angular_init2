@@ -254,5 +254,13 @@
       "dateModification": null,
       "image": "https://images.unsplash.com/photo-1518546305927-5a555bb7020d?q=80&w=800"
     }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "login": "admin@admin.fr",
+      "password": "admin",
+      "token": "MonToken"
+    }
   ]
 }

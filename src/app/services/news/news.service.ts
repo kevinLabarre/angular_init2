@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { News } from '../../interfaces/news.interface';
+import { environment } from '../../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -10,7 +11,7 @@ export class NewsService {
 
   constructor(private http: HttpClient) { }
 
-  baseUrl: string = "http://localhost:3000/actualites";
+  baseUrl: string = environment.newsUrl
 
   getNews(): Observable<News[]> {
     return this.http.get<News[]>(this.baseUrl)

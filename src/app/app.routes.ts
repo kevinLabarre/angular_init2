@@ -10,6 +10,7 @@ import { AccountComponent } from './pages/account/account.component';
 import { SignalsComponent } from './signals/signals.component';
 import { AdminLayoutComponent } from './espace_admin/admin-layout/admin-layout.component';
 import { ADMIN_ROUTES } from './espace_admin/routes/admin.routes';
+import { LoginComponent } from './pages/login/login.component';
 
 export const routes: Routes = [
   { path: "", component: HomePageComponent, title: "Page d'accueil" },
@@ -28,6 +29,7 @@ export const routes: Routes = [
   { path: "compte-bancaire", component: AccountComponent, title: "Comptes bancaire" },
   { path: "signals", component: SignalsComponent, title: "Les signaux" },
 
+  { path: "se-connecter", component: LoginComponent, title: "Se connecter" },
 
   // ESPACE ADMIN
   {

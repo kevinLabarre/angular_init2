@@ -2,6 +2,8 @@ import { HttpClient } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Account } from '../../interfaces/account.interface';
+// import { environment } from '../../../environments/environment.development';
+import { environment } from '../../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -14,7 +16,7 @@ export class AccountService {
   // Ce qui revient au mm que les injections via le constuctor
   http = inject(HttpClient);
 
-  baseUrl = "http://localhost:3000/accounts"
+  baseUrl = environment.accountUrl
 
   getAccounts(): Observable<Account[]> {
     return this.http.get<Account[]>(this.baseUrl)
