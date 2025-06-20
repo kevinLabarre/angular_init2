@@ -1,12 +1,18 @@
 import { isPlatformBrowser } from '@angular/common';
 import { HttpInterceptorFn } from '@angular/common/http';
 import { inject, PLATFORM_ID } from '@angular/core';
+import { Router } from '@angular/router';
 import { catchError, throwError } from 'rxjs';
+import { AuthService } from '../services/auth/auth.service';
 
 
 // Pour que notre interceptor soit utilisé,
 //
 export const sessionInterceptor: HttpInterceptorFn = (req, next) => {
+
+  const router = inject(Router)
+  const service = inject(AuthService)
+
 
   console.log("Requête interceptée !");
 
@@ -32,7 +38,8 @@ export const sessionInterceptor: HttpInterceptorFn = (req, next) => {
   return next(result).pipe(
     catchError(e => {
       if (e.status === 401 || e.status === 403) {
-        // Rediriger vers la page login
+        service.logout()
+        router.navigate(["/se-connecter"])
       }
 
       // Pour rendre l'erreur accessible depuis les composants qui s'abonneront à nos requêtes

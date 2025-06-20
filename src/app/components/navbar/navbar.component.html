@@ -15,7 +15,12 @@
         <!-- Contenu central si nécessaire -->
       </div>
       <div class="navbar-end mr-5">
-        <a routerLink="/se-connecter" class="text-xl font-semibold hover:underline focus:outline-none">Se connecter</a>
+        @if(isAuth()){
+        <a (click)="logout()" class="text-xl font-semibold hover:underline focus:outline-none">{{buttonValue()}}</a>
+        }@else {
+        <a routerLink="/se-connecter"
+          class="text-xl font-semibold hover:underline focus:outline-none">{{buttonValue()}}</a>
+        }
       </div>
     </nav>
   </div>

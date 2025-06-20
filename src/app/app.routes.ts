@@ -11,6 +11,7 @@ import { SignalsComponent } from './signals/signals.component';
 import { AdminLayoutComponent } from './espace_admin/admin-layout/admin-layout.component';
 import { ADMIN_ROUTES } from './espace_admin/routes/admin.routes';
 import { LoginComponent } from './pages/login/login.component';
+import { adminGuard } from './espace_admin/guards/admin.guard';
 
 export const routes: Routes = [
   { path: "", component: HomePageComponent, title: "Page d'accueil" },
@@ -34,11 +35,13 @@ export const routes: Routes = [
   // ESPACE ADMIN
   {
     path: "admin",
-    component: AdminLayoutComponent,
+    // component: AdminLayoutComponent, //-> Chargement 'classique'
+    loadComponent: () => import('./espace_admin/admin-layout/admin-layout.component').then(m => m.AdminLayoutComponent),
     title: "Espace admin",
-    children: ADMIN_ROUTES
+    children: ADMIN_ROUTES,
+    canActivate: [adminGuard],
+    // canActivateChild: []
   },
-
 
   // Page 404
   { path: "**", component: NotFoundComponent }
