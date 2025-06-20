@@ -1,4 +1,6 @@
+import { isPlatformBrowser } from '@angular/common';
 import { HttpInterceptorFn } from '@angular/common/http';
+import { inject, PLATFORM_ID } from '@angular/core';
 import { catchError, throwError } from 'rxjs';
 
 
@@ -6,15 +8,28 @@ import { catchError, throwError } from 'rxjs';
 //
 export const sessionInterceptor: HttpInterceptorFn = (req, next) => {
 
-  const token = "MonToken"
-
   console.log("Requête interceptée !");
 
-  const cloneReq = req.clone({
-    headers: req.headers.set('Authorization', `bearer ${token}`)
-  })
+  const platFormId = inject(PLATFORM_ID)
 
-  return next(cloneReq).pipe(
+  let cloneReq = null
+  let result = null
+
+  if (isPlatformBrowser(platFormId)) {
+    const token = sessionStorage.getItem("token")
+    // Injection du token, nécessaire pour les requêtes sécurisées par bearer token
+    if (token) {
+      cloneReq = req.clone({
+        headers: req.headers.set('Authorization', `bearer ${token}`)
+      })
+    }
+  }
+
+  if (cloneReq) {
+    result = cloneReq
+  } else result = req
+
+  return next(result).pipe(
     catchError(e => {
       if (e.status === 401 || e.status === 403) {
         // Rediriger vers la page login
@@ -24,4 +39,4 @@ export const sessionInterceptor: HttpInterceptorFn = (req, next) => {
       return throwError(() => e)
     })
   )
-};
+}

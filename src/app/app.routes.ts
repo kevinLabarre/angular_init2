@@ -22,7 +22,7 @@ export const routes: Routes = [
       },
       { path: "description", component: NewsDescriptionComponent },
       { path: "ajouter", component: AddNewsComponent },
-      { path: "supprimer", component: RemoveNewsComponent }
+      { path: "supprimer", component: RemoveNewsComponent, canActivate }
     ]
   },
   { path: "news-details/:id", component: NewsDetailsComponent, title: "détail actualité" },

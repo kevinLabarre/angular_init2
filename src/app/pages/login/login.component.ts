@@ -1,7 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { AuthService } from '../../services/auth/auth.service';
-import { subscribe } from 'diagnostics_channel';
 
 @Component({
   selector: 'app-login',
@@ -27,9 +26,9 @@ export class LoginComponent {
         login: this.loginForm.value.login || "",
         password: this.loginForm.value.password || ""
       }
-      this.service.login(login).subscribe({
+      this.service.fakeLogin(login).subscribe({
         // next: resp => localStorage.setItem("token", resp.token),
-        next: resp => sessionStorage.setItem("token", resp.token),
+        // next: resp => sessionStorage.setItem("token", resp.token),
         error: e => console.error(e.message),
       })
     } else console.log("Formulaire non valide")
