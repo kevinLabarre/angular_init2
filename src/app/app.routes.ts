@@ -8,7 +8,6 @@ import { NewsDetailsComponent } from './pages/news-details/news-details.componen
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { AccountComponent } from './pages/account/account.component';
 import { SignalsComponent } from './signals/signals.component';
-import { AdminLayoutComponent } from './espace_admin/admin-layout/admin-layout.component';
 import { ADMIN_ROUTES } from './espace_admin/routes/admin.routes';
 import { LoginComponent } from './pages/login/login.component';
 import { adminGuard } from './espace_admin/guards/admin.guard';
@@ -26,7 +25,11 @@ export const routes: Routes = [
       { path: "supprimer", component: RemoveNewsComponent }
     ]
   },
-  { path: "news-details/:id", component: NewsDetailsComponent, title: "détail actualité" },
+  {
+    path: "news-details/:id",
+    component: NewsDetailsComponent,
+    title: "détail actualité"
+  },
   { path: "compte-bancaire", component: AccountComponent, title: "Comptes bancaire" },
   { path: "signals", component: SignalsComponent, title: "Les signaux" },
 

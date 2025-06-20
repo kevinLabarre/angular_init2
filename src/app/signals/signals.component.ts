@@ -1,5 +1,6 @@
-import { Component, computed, effect, signal, Signal, WritableSignal } from '@angular/core';
+import { Component, computed, effect, inject, PLATFORM_ID, signal, WritableSignal } from '@angular/core';
 import { SignalsChildrenComponent } from "../signals-children/signals-children.component";
+import { isPlatformBrowser } from '@angular/common';
 
 @Component({
   selector: 'app-signals',
@@ -9,8 +10,11 @@ import { SignalsChildrenComponent } from "../signals-children/signals-children.c
 })
 export class SignalsComponent {
 
+  platFormId = inject(PLATFORM_ID)
+
   constructor() {
-    effect(() => document.title = "Mon compteur : " + this.count());
+    if (isPlatformBrowser(this.platFormId))
+      effect(() => document.title = "Mon compteur : " + this.count());
   }
 
   count: WritableSignal<number> = signal(0);
